@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underlying Data Downloader</title>
+    <!-- Tableau Extensions API -->
+    <script src="tableau-extensions.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Data Downloader</h3>
+
+        <div class="form-group">
+            <label for="sheet-select">Select Worksheet:</label>
+            <select id="sheet-select">
+                <option value="" disabled selected>Loading sheets...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Select Columns to Download:</label>
+            <small class="note">You may see extra fields you don't need for the selected sheet</small>
+            <div class="column-actions">
+                <button type="button" id="select-all-btn" class="small-btn">Select All</button>
+                <button type="button" id="deselect-all-btn" class="small-btn">Deselect All</button>
+            </div>
+            <input type="text" id="column-search" placeholder="Search columns..." class="search-input">
+            <div id="column-checkboxes" class="checkbox-container">
+                <p class="placeholder-text">Select a sheet first</p>
+            </div>
+            <div id="selected-count" class="selected-count">0 columns selected</div>
+        </div>
+
+        <div class="form-group">
+            <label>Filters (only selected columns):</label>
+            <div id="filters-container"></div>
+            <button type="button" id="add-filter-btn" class="small-btn" disabled>+ Add Filter</button>
+        </div>
+
+        <div class="button-group">
+            <button id="preview-btn" disabled>Preview (10 rows)</button>
+            <button id="download-btn" disabled>Download CSV</button>
+        </div>
+
+        <div id="status-message"></div>
+        <div id="preview-container"></div>
+    </div>
+</body>
+
+</html>

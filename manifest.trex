@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest manifest-version="0.1" xmlns="http://www.tableau.com/xml/extension_manifest">
+  <dashboard-extension id="com.example.get-ud-data" extension-version="1.0.0">
+    <default-locale>en_US</default-locale>
+    <name resource-id="name"/>
+    <description>Download underlying data with custom filtering.</description>
+    <author name="AI Assistant" email="support@example.com" organization="Example Org" website="https://www.example.com"/>
+    <min-api-version>1.0</min-api-version>
+    <source-location>
+      <url>http://localhost:8000/index.html</url>
+    </source-location>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEASURBVHic7dvBCYQwEAZg/1sVLCNYw11ScFexC3sQ72Jl7wY2sBZEFw/CIiYQE/K/J5kMwc/wJIGEsZRSznM/70FV1W5/o2kace9t2477Yd931HU97jM8z+t+P8/z+M/wfZ8S933/f4KqqqRpGimKQsT7vmfGGCnLMknTVEQiIsYY6bouqSpJ01REIiLGGOl9X5L+80mS9P9PFAF4B+AdgHcA3gF4B+AdgHcA3gF4B+AdgHcA3gF4B+AdgHcA3gF4B+AdgHcA3gF4B+AdgHcA3gF4B+AdgHcA3gF4B+AdgHcA3gF4B+AdgHcA3gF4B+AdgHcA3gF4B+AdgHcAvAPwDsA7gB/1/gH/B3wftQAAAABJRU5ErkJggg==</icon>
+    <permissions>
+      <permission>full data</permission>
+    </permissions>
+  </dashboard-extension>
+  <resources>
+    <resource id="name">
+      <text locale="en_US">Underlying Data Downloader</text>
+    </resource>
+  </resources>
+</manifest>
